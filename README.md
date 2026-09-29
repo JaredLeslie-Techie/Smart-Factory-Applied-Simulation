@@ -1,4 +1,4 @@
-# Smart Factory Applied Simulation
+# AR Smart Factory Applied Simulation
 
 An interactive, browser based Smart Factory with two connected rooms, a pick and place robot, a conveyor packaging line, desktop navigation, and an augmented reality mode. The project uses Three.js for the factory scene and can exchange MQTT commands and sensor data with an ESP8266 and Node-RED setup.
 
@@ -38,7 +38,11 @@ Without private MQTT settings, a missing `config.local.js` request is expected a
 
 ## Try augmented reality
 
-Serve `index.html` from an HTTPS origin, then open it on a device and browser that support WebXR immersive AR and hit testing. Select **Start AR**, scan a horizontal floor until the green placement ring appears, and tap the ring to place the factory. Use the four AR machine buttons; **Exit AR** returns to desktop mode. AR availability depends on the device and browser.
+Augmented reality (AR) lets you see the virtual factory in your real surroundings through a compatible phone or tablet camera. The factory appears to sit on your floor. As you turn or move your phone, your view of the factory changes in real time, letting you look around it from different angles.
+
+To try it, open the simulation over HTTPS on a device and browser that support WebXR immersive AR and hit testing. Tap **Start AR**, point the camera at a clear area of floor until a green placement ring appears, then tap the ring to place the factory. Use the four on-screen buttons to start or stop the robot and conveyor. Tap **Exit AR** to leave AR mode. Availability depends on your device and browser.
+
+**Safety:** Use AR in a large, open space away from furniture, stairs, and other obstacles. Stay aware of your real surroundings as you move around the virtual factory.
 
 ## Optional private MQTT integration
 
@@ -62,6 +66,14 @@ The physical ESP8266 firmware, Node-RED flows, circuit design, and integrated do
 
 See the [Smart Factory documentation notebook](documentation/Smart_Factory_Documentation.ipynb) for the architecture, MQTT topic map, hardware relationship, interaction design, AR placement, test cases, and troubleshooting notes.
 
+## Live web factory simulation
+
+[Open the interactive Smart Factory simulation](https://smartfactoryiiot.netlify.app/) to explore the two-room 3D factory directly in your browser. Walk through the scene and use the factory control panels to start or stop the robot and conveyor. On a device that supports WebXR AR, select **Start AR** to place the virtual factory on a real floor.
+
 ## Integrated demonstration video
 
 [Watch the Smart Factory project video on YouTube](https://youtu.be/29-3qCWDQm4). It shows the simulation together with the monitoring dashboard and physical prototype.
+
+## Augmented reality demonstration video
+
+[Watch the Smart Factory AR demonstration on YouTube Shorts](https://youtube.com/shorts/Jk8Vakwct8A). This short clip shows the factory in AR mode: as the phone turns, the view changes with it, letting you look around the virtual factory from different angles.
